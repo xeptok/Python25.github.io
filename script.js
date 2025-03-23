@@ -8,7 +8,7 @@ let btn2 = document.querySelector('#btn2')
 let btn3 = document.querySelector('#btn3')
 let btn4 = document.querySelector('#btn4')
 
-btn1.oneclick = () => {
+btn1.onclick = () => {
     if (tg.MainButton.isVisible)
         tg.MainButton.hide()
     } else {
@@ -17,7 +17,7 @@ btn1.oneclick = () => {
         tg.MainButton.show()
     }
 
-btn2.oneclick = () => {
+btn2.onclick = () => {
     if (tg.MainButton.isVisible)
         tg.MainButton.hide()
     } else {
@@ -26,7 +26,7 @@ btn2.oneclick = () => {
         tg.MainButton.show()
     }
 
-btn3.oneclick = () => {
+btn3.onclick = () => {
     if (tg.MainButton.isVisible)
         tg.MainButton.hide()
     } else {
@@ -35,7 +35,7 @@ btn3.oneclick = () => {
         tg.MainButton.show()
     }
 
-btn4.oneclick = () => {
+btn4.onclick = () => {
     if (tg.MainButton.isVisible)
         tg.MainButton.hide()
     } else {
@@ -46,7 +46,7 @@ btn4.oneclick = () => {
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
     tg.sendData(item)
-    
+
 })
 
 tg.expand()
