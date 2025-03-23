@@ -45,7 +45,7 @@ btn4.onclick = () => {
     }
 
 Telegram.WebApp.onEvent('mainButtonClicked', function() {
-    tg.sendData(item)
+    tg.sendData(item);
 
 })
 
