@@ -1,12 +1,52 @@
 let tg = window.Telegram.WebApp;
 
-tg.expand()
+tg.MainButton.textColor = "#FFFFFF"
+tg.MainButton.color = "2cab37"
 
-let btn = document.querySelector('#click')
+let btn1 = document.querySelector('#btn1')
+let btn2 = document.querySelector('#btn2')
+let btn3 = document.querySelector('#btn3')
+let btn4 = document.querySelector('#btn4')
 
-btn.oneclick = () => {
+btn1.oneclick = () => {
     if (tg.MainButton.isVisible)
         tg.MainButton.hide()
     } else {
-        tg.MainButton.setText("Гарик Харламоооов!")
-        tg.MainButton.show()}
+        tg.MainButton.setText("Москва - Санкт-Петербург")
+        item = "москва - санкт-петербург"
+        tg.MainButton.show()
+    }
+
+btn2.oneclick = () => {
+    if (tg.MainButton.isVisible)
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.setText("РНД - КРАСНОДАР")
+        item = "рнд - краснодар"
+        tg.MainButton.show()
+    }
+
+btn3.oneclick = () => {
+    if (tg.MainButton.isVisible)
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.setText("кузбасс - рнд")
+        item = "кузбасс - рнд"
+        tg.MainButton.show()
+    }
+
+btn4.oneclick = () => {
+    if (tg.MainButton.isVisible)
+        tg.MainButton.hide()
+    } else {
+        tg.MainButton.setText("омск - онд")
+        item = "омск - рнд"
+        tg.MainButton.show()
+    }
+
+Telegram.WebApp.onEvent('mainButtonClicked', function() {
+    tg.sendData(item)
+    
+})
+
+tg.expand()
